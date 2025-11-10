@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrowed Books Details Page</title>
+    <link rel="stylesheet" href="../css/BorrowedDetails.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="../image/logo.png" alt="Library Hub Logo" />
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." />
+            <select>
+                <option>All Categories</option>
+            </select>
+        </div>
+
+        <div class="menu-icon">&#9776;</div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="../image/sison.jpg" alt="Profile Picture" />
+            <h3>Christian Mark Sison</h3>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li><a href="AccountManagement.html">Account Management</a></li>
+            <li><a href="Borrowed.html">Borrowed Books</a></li>
+            <li><a href="ReturnedBooks.html">Returned Books</a></li>
+        </ul>
+
+        <button class="sign-out">SIGN OUT</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Left Side -->
+        <div class="book-info-left">
+            <img src="../image/mockingbird.png" alt="To Kill a Mockingbird">
+            <h1>To kill a Mocking Bird</h1>
+            <p>
+                A child’s-eye view of racial injustice in the American South. Through Scout’s eyes we watch her father, the principled lawyer Atticus Finch, courageously defend Tom Robinson, a Black man falsely accused of raping a white woman, and in doing so expose the town’s deep-seated racism and moral failures. The trial’s outcome and its tragic consequences force Scout and her brother Jem to confront the loss of innocence, while the reclusive neighbor Arthur “Boo” Radley—once the subject of childhood fears and rumors—ultimately reveals unexpected kindness by protecting the children, teaching them empathy and the importance of seeing people for who they really are.
+            </p>
+        </div>
+
+        <!-- Right Side -->
+        <div class="book-info-right">
+            <h2 class="status">Available</h2>
+            <div class="info-panel">
+                <p><strong>Title:</strong> To Kill a Mockingbird</p>
+                <p><strong>Author:</strong> Nelle Harper Lee (commonly credited as Harper Lee)</p>
+                <p><strong>First published:</strong> July 11, 1960 (United States)</p>
+                <p><strong>Original publisher:</strong> J. B. Lippincott & Co.</p>
+                <p><strong>Format & length:</strong> Originally published as a hardcover novel; typical modern paperback editions run ~280–320 pages (commonly cited as 281 pages).</p>
+                <p><strong>Genre:</strong> Southern Gothic; Bildungsroman (coming-of-age); Social novel addressing racial injustice.</p>
+                <p><strong>Narrator / Point of view:</strong> First-person retrospective narration by Jean Louise “Scout” Finch (an adult narrator recalling childhood events).</p>
+                <p><strong>Setting:</strong> Maycomb, Alabama — a fictional, small Southern town during the 1930s (Great Depression era).</p>
+            </div>
+            <button class="return-btn" onclick="returnBook()">RETURN</button>
+        </div>
+    </div>
+
+    <script src="../js/borrowed.js"></script>
+</body>
+</html>

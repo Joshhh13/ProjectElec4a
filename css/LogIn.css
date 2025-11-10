@@ -118,20 +118,22 @@
   text-decoration: none;
 }
 
-.login-btn {
+.btn-hp2 .Login {
+  padding: 10px 20px;
   background-color: #4a2d23;
   color: white;
-  border: none;
-  padding: 12px;
   border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
+  text-decoration: none;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
 }
 
-.login-btn:hover {
+.btn-hp2 .Login:hover {
   background-color: #a06a55;
+   
 }
+
 
 /* Divider */
 .divider {

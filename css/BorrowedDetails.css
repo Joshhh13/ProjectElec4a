@@ -1,0 +1,205 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(119, 14, 14, 0.1);
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+.search-bar {
+  display: flex;
+  gap: 8px;
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 8px 15px;
+  border: 1px solid #770e0e;
+  border-radius: 5px;
+}
+
+.menu-icon {
+  color: #770e0e;
+  font-size: 1.8em;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.menu-icon:hover {
+  color: #5a0b0b;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sidebar-menu {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+}
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  display: block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: all 0.3s;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #a06a55;
+  color: white;
+}
+
+.sign-out {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a2d23;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sign-out:hover {
+  background-color: #a06a55;
+}
+
+/* OVERLAY */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+}
+
+.overlay.active {
+  display: block;
+}
+
+
+/* MAIN CONTENT */
+
+/* Container for both left and right sections */
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    height: 88vh; /* Buo hanggang pababa */
+    overflow-y: auto;  /* Para may scroll kung kailangan */
+}
+
+/* Left section (for image, title, and description) */
+.book-info-left {
+    background-color: #f0f0f0; /* Light gray */
+    flex: 0 0 55%;             /* 55% width */
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;        /* I-center ang lahat ng text */
+}
+
+.book-info-left img {
+    width: 30%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin: 0 auto 20px auto; /* Center horizontally and add bottom margin */
+}
+
+.book-info-left h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 20px 0;
+    text-align: center;
+    max-width: 600px;
+}
+
+.book-info-left p {
+    font-size: 16px;
+    color: black;
+    line-height: 1.8;
+    max-width: 600px;      
+    text-align: justify;   
+    margin: 0 auto;        
+    padding: 0 20px;    
+}
+
+
+.book-info-right {
+    background-color: #DBBCB0; /* Light brown */
+    flex: 0 0 45%;             /* 45% width */
+    padding: 20px;
+    box-sizing: border-box;
+
+    /* 💡 Para i-center din kung gusto mo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}

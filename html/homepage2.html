@@ -3,234 +3,257 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LandingPage2</title>
-  <link rel="stylesheet" href="homepage2.css" />
+  <title>homepage2</title>
+  <link rel="stylesheet" href="../css/homepage2.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="Library Hub Logo" />
-    </div>
-    <div class="search-bar">
-      <input type="text" placeholder="Search..." />
-      <select>
-        <option>All Categories</option>
-      </select>
-    </div>
+
+      <div class="logo">
+          <img src="../image/logo.png" alt="Library Hub Logo" />
+      </div>
+
+      <div class="search-bar">
+          <input type="text" placeholder="Search..." />
+
+          <select>
+              <option>All Categories</option>
+          </select>
+      </div>
+
     <div class="menu-icon">&#9776;</div>
+
   </header>
+
 
   <!-- SIDEBAR -->
   <div class="sidebar">
-    <div class="sidebar-header">
-      <img src="logo.png" alt="Profile Picture" />
-      <h3>Christian Mark Sison</h3>
-    </div>
-    <ul class="sidebar-menu">
-      <li>Account Management</li>
-      <li>Borrowed Books</li>
-      <li>Returned Books</li>
-    </ul>
+
+      <div class="sidebar-header">
+          <img src="../image/sison.jpg" alt="Profile Picture" />
+          <h3>Christian Mark Sison</h3>
+      </div>
+
+      <ul class="sidebar-menu">
+          <li><a href="AccountManagement.html">Account Management</a></li>
+          <li><a href="Borrowed.html">Borrowed Books</a></li>
+          <li><a href="ReturnedBooks.html">Returned Books</a></li>
+      </ul>
+
     <button class="sign-out">SIGN OUT</button>
+
   </div>
+
+
 
   <!-- OVERLAY -->
   <div class="overlay"></div>
 
   <section class="hero">
-    <div class="hero-text">
-      <h1>Read. Learn. Grow.</h1>
-      <p>Welcome to the library.</p>
-    </div>
-    <img src="1.png" alt="Students" />
-  </section>
-  
-  
 
+      <div class="hero-text">
+          <h1>Read. Learn. Grow.</h1>
+          <p>Welcome to the library.</p>
+      </div>
+
+      <img src="../image/1.png" alt="Students" />
+
+  </section>
+
+
+  
+  <!--FilterBTN-->
   <section class="filters">
-    <button class="active">All</button>
-    <button>Available</button>
-    <button>Latest</button>
-    <button>Oldest</button>
-    <button>Most Borrowed</button>
+      <ul class="nav-btn">
+          <li><a href="homepage2.html" class="active">All</a></li>
+          <li><a href="Available.html">Available</a></li>
+          <li><a href="#">Latest</a></li>
+          <li><a href="#">Oldest</a></li>
+          <li><a href="#">Most Borrowed</a></li>
+      </ul>
   </section>
 
-  <!-- ROWS (1 to 5 — same repeated for demo) -->
-  <section class="books">
-    <div class="book-card">
-      <img src="mockingbird.png" alt="Book" />
-      <div class="content">
-        <h3>To Kill a Mockingbird</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1980</div>
-    </div>
-    <div class="book-card">
-      <img src="Light.png" alt="Book" />
-      <div class="content">
-        <h3>Light</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1960</div>
-    </div>
-    <div class="book-card">
-      <img src="Siege.png" alt="Book" />
-      <div class="content">
-        <h3>The Siege</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1970</div>
-    </div>
-    <div class="book-card">
-      <img src="Goodbye.png" alt="Book" />
-      <div class="content">
-        <h3>Gone Before Goodbye</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1950</div>
-    </div>
-  </section>
 
-  <section class="books">
-    <div class="book-card">
-      <img src="mockingbird.png" alt="Book" />
-      <div class="content">
-        <h3>To Kill a Mockingbird</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1980</div>
-    </div>
-    <div class="book-card">
-      <img src="Light.png" alt="Book" />
-      <div class="content">
-        <h3>Light</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1960</div>
-    </div>
-    <div class="book-card">
-      <img src="Siege.png" alt="Book" />
-      <div class="content">
-        <h3>The Siege</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1970</div>
-    </div>
-    <div class="book-card">
-      <img src="Goodbye.png" alt="Book" />
-      <div class="content">
-        <h3>Gone Before Goodbye</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1950</div>
-    </div>
-  </section>
 
-  <section class="books">
-    <div class="book-card">
-      <img src="mockingbird.png" alt="Book" />
-      <div class="content">
-        <h3>To Kill a Mockingbird</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1980</div>
-    </div>
-    <div class="book-card">
-      <img src="Light.png" alt="Book" />
-      <div class="content">
-        <h3>Light</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1960</div>
-    </div>
-    <div class="book-card">
-      <img src="Siege.png" alt="Book" />
-      <div class="content">
-        <h3>The Siege</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1970</div>
-    </div>
-    <div class="book-card">
-      <img src="Goodbye.png" alt="Book" />
-      <div class="content">
-        <h3>Gone Before Goodbye</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1950</div>
-    </div>
-  </section>
+  <!--ListCard-->
+  <div class="book-container">
+  <!-- 1 -->
+  <div class="book-card" data-valid="true">
 
-  <section class="books">
-    <div class="book-card">
-      <img src="mockingbird.png" alt="Book" />
-      <div class="content">
-        <h3>To Kill a Mockingbird</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1980</div>
-    </div>
-    <div class="book-card">
-      <img src="Light.png" alt="Book" />
-      <div class="content">
-        <h3>Light</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1960</div>
-    </div>
-    <div class="book-card">
-      <img src="Siege.png" alt="Book" />
-      <div class="content">
-        <h3>The Siege</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1970</div>
-    </div>
-    <div class="book-card">
-      <img src="Goodbye.png" alt="Book" />
-      <div class="content">
-        <h3>Gone Before Goodbye</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1950</div>
-    </div>
-  </section>
+        <div class="checkmark">✅</div>
 
-  <section class="books">
-    <div class="book-card">
-      <img src="mockingbird.png" alt="Book" />
-      <div class="content">
-        <h3>To Kill a Mockingbird</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1980</div>
-    </div>
-    <div class="book-card">
-      <img src="Light.png" alt="Book" />
-      <div class="content">
-        <h3>Light</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1960</div>
-    </div>
-    <div class="book-card">
-      <img src="Siege.png" alt="Book" />
-      <div class="content">
-        <h3>The Siege</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1970</div>
-    </div>
-    <div class="book-card">
-      <img src="Goodbye.png" alt="Book" />
-      <div class="content">
-        <h3>Gone Before Goodbye</h3>
-        <p>A child's-eye view of racial<br>injustice...in the american sou..</p>
-      </div>
-      <div class="author">Author: Harper Lee<br>Published 1950</div>
-    </div>
-  </section>
+        <a href="mockingbird.html">
+            <img src="../image/mockingbird.png" alt="To Kill a Mockingbird" />
+            <h3>To Kill a Mockingbird</h3>
 
-  <script src="homepage2.js"></script>
+            <p>A child’s-eye view of racial injustice in the American South...</p>
+
+            <div class="footer">
+                <span>Author: Harper Lee</span>
+                <span>Published: 1960</span>
+            </div>
+        </a>
+  </div>
+
+  <!-- 2 -->
+  <div class="book-card" data-valid="false">
+
+        <div class="na-label">N/A</div>
+
+        <a href="Light.html">
+            <img src="../image/Light.png" alt="Light" />
+            <h3>Light</h3>
+
+            <p>A child’s-eye view of racial injustice in the American South...</p>
+
+            <div class="footer">
+                <span>Author: Harper Lee</span>
+                <span>Published: 1960</span>
+            </div>
+        </a>
+  </div>
+
+  <!-- 3 -->
+  <div class="book-card" data-valid="true">
+
+        <div class="checkmark">✅</div>
+
+        <a href="Siege.html">
+            <img src="../image/Siege.png" alt="The Siege" />
+            <h3>The Siege</h3>
+
+            <p>A child’s-eye view of racial injustice in the American South...</p>
+
+            <div class="footer">
+                <span>Author: Harper Lee</span>
+                <span>Published: 1960</span>
+            </div>
+        </a>
+  </div>
+
+  <!-- 4 -->
+  <div class="book-card" data-valid="true">
+
+        <div class="checkmark">✅</div>
+
+        <a href="goodbye.html">
+            <img src="../image/Goodbye.png" alt="Gone Before Goodbye" />
+            <h3>Gone Before Goodbye</h3>
+
+            <p>A child’s-eye view of racial injustice in the American South...</p>
+
+            <div class="footer">
+                <span>Author: Harper Lee</span>
+                <span>Published: 1960</span>
+            </div>
+        </a>
+  </div>
+
+
+  <!-- 5 -->
+  <div class="book-card" data-valid="true">
+
+        <div class="checkmark">✅</div>
+
+        <a href="goodbye.html">
+            <img src="../image/Goodbye.png" alt="Gone Before Goodbye" />
+            <h3>Gone Before Goodbye</h3>
+
+            <p>A child’s-eye view of racial injustice in the American South...</p>
+
+            <div class="footer">
+                <span>Author: Harper Lee</span>
+                <span>Published: 1960</span>
+            </div>
+        </a>
+  </div>
+
+
+  <!-- 6 -->
+  <div class="book-card" data-valid="true">
+
+        <div class="checkmark">✅</div>
+
+        <a href="#">
+            <img src="../image/mate.png" alt="Mate" />
+            <h3>Mate</h3>
+
+            <p>A child’s-eye view of racial injustice in the American South...</p>
+
+            <div class="footer">
+                <span>Author: Harper Lee</span>
+                <span>Published: 1960</span>
+            </div>
+        </a>
+  </div>
+
+  <!-- 7 -->
+  <div class="book-card" data-valid="true">
+
+        <div class="checkmark">✅</div>
+
+        <a href="#">
+            <img src="../image/alchemissed.png" alt="Alchemized" />
+            <h3>Alchemized</h3>
+
+            <p>A child’s-eye view of racial injustice in the American South...</p>
+
+            <div class="footer">
+                <span>Author: Harper Lee</span>
+                <span>Published: 1960</span>
+            </div>
+        </a>
+  </div>
+
+  <!-- 8 -->
+  <div class="book-card" data-valid="true">
+
+        <div class="checkmark">✅</div>
+
+        <a href="#">
+            <img src="../image/siege.png" alt="undersiege" />
+            <h3>undersiege</h3>
+
+            <p>A child’s-eye view of racial injustice in the American South...</p>
+
+            <div class="footer">
+                <span>Author: Harper Lee</span>
+                <span>Published: 1960</span>
+            </div>
+        </a>
+  </div>
+
+  <!-- 9 -->
+  <div class="book-card" data-valid="true">
+
+        <div class="na-label">N/A</div>
+
+        <a href="#">
+            <img src="../image/remain.png" alt="remain" />
+            <h3>Remain</h3>
+
+            <p>A child’s-eye view of racial injustice in the American South...</p>
+
+            <div class="footer">
+                <span>Author: Harper Lee</span>
+                <span>Published: 1960</span>
+            </div>
+        </a>
+  </div>
+
+
+  
+
+  </div>
+
+  
+
+  
+
+
+
+  <script src="../js/homepage2.js"></script>
 </body>
 </html>

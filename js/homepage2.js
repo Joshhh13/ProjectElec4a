@@ -14,3 +14,26 @@ overlay.addEventListener('click', () => {
   sidebar.classList.remove('active');
   overlay.classList.remove('active');
 });
+
+
+document.querySelectorAll('.book-card').forEach(card => {
+  card.addEventListener('click', function() {
+    // Remove selected from all
+    document.querySelectorAll('.book-card').forEach(c => c.classList.remove('selected'));
+    // Add selected to this
+    this.classList.add('selected');
+  });
+});
+
+
+// Example: Add "N/A" label or disable click dynamically 
+document.addEventListener('DOMContentLoaded', function() {
+    const bookCards = document.querySelectorAll('.book-card');
+
+    bookCards.forEach(card => {
+        if (card.getAttribute('data-valid') === 'false') {
+            // You can add an N/A overlay here if needed
+        }
+    });
+});
+

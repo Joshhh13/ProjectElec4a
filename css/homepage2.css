@@ -11,7 +11,7 @@ header {
   align-items: center;
   padding: 20px 50px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(235, 9, 9, 0.1);
 }
 
 .logo img {
@@ -71,73 +71,44 @@ header {
 .filters {
   justify-content: right;
   display: flex;
+  align-items: center;
   gap: 30px;
   padding: 20px 50px;
+  margin-top: 45px;
+  margin-bottom: 45px;
 }
 
-.filters button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  background-color: #bfa58f;
-  color: #fff;
-  font-weight: 500;
-}
-
-.filters button.active {
-  background-color: #6f4e37;
-}
-
-
-
-
-/* Books Grid */
-.books {
-  margin-left: 450px;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 100px;
-  padding: 20px 50px;
-}
-
-.book-card {
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.nav-btn {
   display: flex;
-  flex-direction: column;
-}
-
-.book-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-}
-
-.book-card .content {
-  padding: 10px;
-}
-
-.book-card h3 {
+  list-style: none;
+  gap: 50px;
   margin: 0;
-  font-size: 1em;
+  padding: 0;
 }
 
-.book-card p {
-  font-size: 0.85em;
-  color: #555;
+.nav-btn li a{
+  text-decoration: none;
+  background-color: #a06a55;
+  color: white;
+  font-weight: 400;
+  transition: 0.3s;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: 0.3s;
 }
 
-.book-card .author {
-  margin-top: auto;
-  padding: 10px;
-  background-color: #bfa58f;
-  color: #fff;
-  text-align: center;
-  font-size: 0.85em;
+.nav-btn li a:hover {
+  color: white;   
+  background: #a06a55;
 }
+
+.nav-btn a.active {
+  background-color: #4a2d23;
+  color: white;
+  
+}
+
+
 
 /* SIDEBAR */
 .sidebar {
@@ -187,18 +158,33 @@ header {
   cursor: pointer;
   border-bottom: 1px solid #ddd;
   color: #333;
-  transition: background-color 0.2s;
+  transition: background-color 0.3s;
 }
 
-.sidebar-menu li:hover {
-  background-color: #f0f0f0;
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: black; 
+  font-weight: 500;
+  display: block;
+  padding: 8px 25px; 
+  border-radius: 6px;
+}
+
+.sidebar-menu li a:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    background-color: #a06a55; 
+    padding: 10px 25px;
+    transition: 0.3s;
 }
 
 .sign-out {
   width: 100%;
   padding: 12px;
   background-color: #4a2d23;
-  color: #fff;
+  color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -225,4 +211,104 @@ header {
 
 .overlay.active {
   display: block;
+}
+
+/* Books Grid */
+.book-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 70px; /* Gap sa horizontal at vertical */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  
+}
+
+.book-card {
+  width: 250px; /* Mas malawak */
+  min-height: 360px; /* Para hindi mag-collapse kapag maikli ang text */
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.book-card a{
+  text-decoration: none;
+}
+
+.book-card.selected {
+  border: 3px solid #4a2d23;
+  box-shadow: 0 0 0 4px rgba(76, 175, 80, 0.2);
+}
+
+.book-card .checkmark,
+.book-card .na-label {
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  background: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 10;
+}
+
+.book-card .na-label {
+  background: #4b4a4a;
+  color: white;
+  font-size: 10px;
+}
+
+.book-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.book-card h3 {
+  padding: 12px 16px 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.book-card p {
+  padding: 0 16px 12px;
+  font-size: 12px;
+  color: #666;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.book-card .footer {
+  text-align: center;
+  font-weight: bold;
+  background: linear-gradient(to right, #75645E, #DBBCB0);
+  padding: 20px 20px;
+  font-size: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.book-card .footer span {
+  font-weight: 500;
 }

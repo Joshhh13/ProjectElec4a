@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="LogIn.css">
+    <link rel="stylesheet" href="../css/LogIn.css">
     <title>LogIn Page</title>
 </head>
 <body>
@@ -11,7 +11,7 @@
     <header>
     <nav class="navbar">
       <div class="logo">
-        <img src="logo.png" alt="Library Hub Logo">
+        <img src="../image/logo.png" alt="Library Hub Logo">
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -30,7 +30,7 @@
   <section class="login-container">
     <!-- Left: Image -->
     <div class="login-image">
-      <img src="books.png" alt="Open Book">
+      <img src="../image/books.png" alt="Open Book">
     </div>
 
     <!-- Right: Form -->
@@ -39,22 +39,26 @@
       <form>
         <input type="email" placeholder="Enter your email" required>
         <input type="password" placeholder="Enter your password" required>
+
         <div class="forgot">
           <a href="#">Forgot password?</a>
         </div>
-        <button type="submit" class="login-btn">Login</button>
+        
+        <div class="btn-hp2">
+          <a href="homepage2.html" class="Login">Login</a>
+        </div>
       </form>
 
       <div class="divider">Or</div>
 
       <div class="social-login">
         <button class="google">
-            <img src="google.png" alt="Google Logo">
+            <img src="../image/google.png" alt="Google Logo">
             <span>Google Sign in</span>
         </button>
 
         <button class="facebook">
-            <img src="facebook.jpg" alt="Facebook Logo">
+            <img src="../image/facebook.jpg" alt="Facebook Logo">
             <span>Facebook Sign In</span>
         </button>
         </div>
