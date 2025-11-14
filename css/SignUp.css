@@ -44,8 +44,8 @@
   background: #4a2d23;
 }
 
-
-.auth-buttons .signup {
+/* btn login and signup */
+.auth-buttons a {
   padding: 10px 20px;
   background-color: #4a2d23;
   color: white;
@@ -54,11 +54,11 @@
   transition: 0.3s;
 }
 
-.auth-buttons .signup:hover {
+.auth-buttons a:hover {
   background-color: #a06a55;
 }
 
-/* Login Section */
+/* background */
 .login-container {
   display: flex;
   justify-content: center;
@@ -99,14 +99,39 @@
   gap: 15px;
 }
 
+/* general input design */
 .login-form input {
+  width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
   font-size: 15px;
+  box-sizing: border-box;
 }
 
-.create-btn {
+/* password container layout */
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* password input same size as others */
+.password-container input {
+  width: 100%;
+  padding-right: 40px; /* space for the eye icon */
+}
+
+/* eye icon design */
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #5a3b2c;
+}
+
+.login-form button {
   background-color: #4a2d23;
   color: white;
   border: none;
@@ -117,9 +142,10 @@
   transition: 0.3s;
 }
 
-.create-btn:hover {
+.login-form button:hover {
   background-color: #a06a55;
 }
+
 
 .forgot {
   text-align: right;
@@ -191,6 +217,7 @@
   padding: 10px 20px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  color: black;
   background: #fff;
   cursor: pointer;
   font-size: 11px;

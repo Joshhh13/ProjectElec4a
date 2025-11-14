@@ -4,8 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReturnedBooks</title>
+    <link rel="stylesheet" href="../css/returned.css">
 </head>
 <body>
+
+    <!-- HEADER -->
+  <header>
+
+      <div class="logo">
+        <a href="homepage2.html">
+          <img src="../image/logo.png" alt="Library Hub Logo" />
+        </a>
+      </div>
+
+      <div class="search-bar">
+          <input type="text" placeholder="Search..." />
+
+          <select>
+              <option>All Categories</option>
+          </select>
+      </div>
+
+    <div class="menu-icon">&#9776;</div>
+
+  </header>
+
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+      <div class="sidebar-header">
+          <img src="../image/sison.jpg" alt="Profile Picture" />
+          <h3>Christian Mark Sison</h3>
+      </div>
+
+      <ul class="sidebar-menu">
+          <li><a href="AccountManagement.html">Account Management</a></li>
+          <li><a href="Borrowed.html">Borrowed Books</a></li>
+          <li><a href="ReturnedBooks.html">Returned Books</a></li>
+      </ul>
+
+    <button class="sign-out">SIGN OUT</button>
+
+  </div>
+
+
+
+  <!-- OVERLAY -->
+  <div class="overlay"></div>
+
+
+  <!-- Main Content -->
+    
+
+
+    <!-- SIDEBAR TOGGLE -->
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.overlay');
+
+        menuIcon.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        });
+    </script>
     
 </body>
 </html>

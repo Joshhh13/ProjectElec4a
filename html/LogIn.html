@@ -37,16 +37,15 @@
     <div class="login-form">
       <h2>WELCOME BACK!</h2>
       <form>
-        <input type="email" placeholder="Enter your email" required>
-        <input type="password" placeholder="Enter your password" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="password" id="password" placeholder="Enter your password" required>
 
         <div class="forgot">
           <a href="#">Forgot password?</a>
         </div>
         
-        <div class="btn-hp2">
-          <a href="homepage2.html" class="Login">Login</a>
-        </div>
+        <button type="button" id="loginBtn" disabled>Login</button>
+
       </form>
 
       <div class="divider">Or</div>
@@ -64,6 +63,8 @@
         </div>
     </div>
   </section>
+
+  <script src="../js/Login.js"></script>
     
 </body>
 </html>

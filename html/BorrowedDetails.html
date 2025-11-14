@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borrowed Books Details Page</title>
+    <title>MockingBird</title>
     <link rel="stylesheet" href="../css/BorrowedDetails.css">
 </head>
 <body>
 
     <!-- Header -->
     <header>
+
         <div class="logo">
-            <img src="../image/logo.png" alt="Library Hub Logo" />
+        <a href="homepage2.html">
+          <img src="../image/logo.png" alt="Library Hub Logo" />
+        </a>
         </div>
 
         <div class="search-bar">
@@ -68,6 +71,41 @@
                 <p><strong>Setting:</strong> Maycomb, Alabama — a fictional, small Southern town during the 1930s (Great Depression era).</p>
             </div>
             <button class="return-btn" onclick="returnBook()">RETURN</button>
+        </div>
+    </div>
+
+        <!-- RETURN MODAL -->
+    <div id="returnModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div class="modal-body">
+                <!-- LEFT COLUMN -->
+                <div class="modal-left">
+                    <h3>Borrower Information</h3>
+                    <input type="text" placeholder="Student ID">
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Course / Department / Year Level">
+                    <input type="text" placeholder="Transaction ID">
+
+                    <h3>Borrowing Details</h3>
+                    <input type="text" placeholder="Date Borrowed">
+                    <input type="text" placeholder="Due Date / Return Date">
+                    <input type="text" placeholder="Status">
+                    <input type="text" placeholder="Remarks / Notes">
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="modal-right">
+                    <h3>Book Information</h3>
+                    <input type="text" placeholder="Book ID">
+                    <input type="text" placeholder="Book Title">
+                    <input type="text" placeholder="Author">
+                    <input type="text" placeholder="Category / Subject">
+
+                    <button class="confirm-btn">CONFIRM</button>
+                </div>
+            </div>
         </div>
     </div>
 

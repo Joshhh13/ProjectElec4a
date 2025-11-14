@@ -14,13 +14,14 @@
       <div class="logo">
         <img src="../image/logo.png" alt="Library Hub Logo">
       </div>
-      <ul class="nav-links">
+      <ul class="nav-links">  
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
         <li><a href="faqs.html">FAQs</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="auth-buttons">
+        <a href="login.html" class="login">Login</a>
         <a href="#" class="signup">Sign Up</a>
       </div>
     </nav>
@@ -38,11 +39,19 @@
     <div class="login-form">
       <h2>CREATE YOUR ACCOUNT</h2>
       <form>
-        <input type="text" placeholder="Enter your name" required>
+        <input type="text" id="fullName" placeholder="Enter your full name" required>
+        <input type="date" placeholder="Date of birth" required>
+        <input type="text" placeholder="Address" required>
         <input type="email" placeholder="Enter your email" required>
-        <input type="password" placeholder="Create your password" required>
-        <button type="submit" class="create-btn">Create</button>
+      
+        <div class="password-container">
+          <input type="password" placeholder="Create your password" id="password" required>
+          <span class="toggle-password" onclick="togglePassword()"></span>
+        </div>
+      
+        <button type="submit">Create</button>
       </form>
+
 
       <div class="divider">Or</div>
 
@@ -59,6 +68,8 @@
         </div>
     </div>
   </section>
+
+  <script src="../js/signup.js"></script>
     
 </body>
 </html>
