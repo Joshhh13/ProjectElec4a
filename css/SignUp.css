@@ -45,17 +45,32 @@
 }
 
 /* btn login and signup */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px; 
+}
+
 .auth-buttons a {
-  padding: 10px 20px;
-  background-color: #4a2d23;
-  color: white;
+  display: inline-block;
+  padding: 10px 25px;
   border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
   text-decoration: none;
-  transition: 0.3s;
+  background-color: #4a2d23;  
+  color: white;              
+  border: none;
+  transition: all 0.3s ease;  
 }
 
 .auth-buttons a:hover {
-  background-color: #a06a55;
+  background-color: #a06a55;  
+  box-shadow: 0 4px 10px rgba(160, 106, 85, 0.4);
+  transform: translateY(-2px); 
+  color: white;
+  font-weight: 500;
 }
 
 /* background */

@@ -151,17 +151,16 @@ header {
 
 /* BOOKS */
 
-.container h1 {
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.container h1 {
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .book-row {

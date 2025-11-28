@@ -4,8 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AccountManagement</title>
+    <link rel="stylesheet" href="../css/account.css">
 </head>
+
+
 <body>
+
+    <!--HEADER-->
+    <header>
+
+            <div class="logo">
+                <a href="homepage2.html">
+                    <img src="../image/logo.png" alt="Library hub logo" />
+                </a>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="search..." />
+
+                <select>
+                    <option>All Categories</option>
+                </select>
+            </div>
+
+            <div class="menu-icon">&#9776;</div>
+
+    </header>
+
+    <!-- OVERLAY -->
+    <div class="overlay"></div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+            <div class="sidebar-header">
+                <img src="../image/sison.jpg" alt="Profile Picture" />
+                <h3>Christian Mark Sison</h3>
+            </div>
+
+            <ul class="sidebar-menu">
+                <li><a href="AccountManagement.html">Account Management</a></li>
+                <li><a href="Borrowed.html">Borrowed Books</a></li>
+                <li><a href="ReturnedBooks.html">Returned Books</a></li>
+            </ul>
+
+            <button class="sign-out">SIGN OUT</button>
+
+    </div>
+
+
+
+    <div class="container">
+
+            <div class="header">
+                <img src="../image/sison1.png" alt="Profile Picture" class="profile-pic" />
+                <button class="edit-btn">✏️</button>
+            </div>
+
+            <div class="main-content">
+                <!-- Who I Am LEFT  SIDE -->
+                <div class="who-am-i">
+                    
+                    <h2>
+                        Who I Am
+                        <span class="edit-icon">✏️</span>
+                    </h2>
+
+                    <p>
+                        I live between the pages of books and the quiet hum of library aisles — where imagination meets knowledge.<br>
+                        As a guardian of words and worlds, I believe every book has the power to open a door, heal a heart, or change a mind. <br>
+                        From ancient manuscripts to modern masterpieces, I find beauty in the written word and joy in connecting readers with the stories that shape their souls.
+                    </p>
+
+                    <ul class="info-list">
+                        <li class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                            Christian Mark Sison
+                        </li>
+                        <li class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 12h-4v4h4v-4zM17 4h-4v4h4V4zM9 4H5v4h4V4zM9 12H5v4h4v-4zM9 20v-4H5v4h4zm12 0v-4h-4v4h4zM17 20v-4h-4v4h4zM12 18c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                            September 18, 2003
+                        </li>
+                        <li class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+                            11talisy.sisonchristianmark@gmail.com
+                        </li>
+                        <li class="info-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            12 Saint Mark Street, Central Bicutan, Cavite City
+                        </li>
+                    </ul>
+                </div>
+
+
+
+                <!-- History RIGHT  SIDE -->
+                <div class="history-section">
+
+                    <h2>History</h2>
+
+                    <!-- Book Card 1 -->
+                    <div class="book-card">
+                        <img src="../image/mockingbird.png" alt="Book Cover" class="book-cover" />
+                        <div class="book-info">
+                            <div class="book-title">To Kill a Mockingbird</div>
+                            <div class="book-desc">
+                                    A child’s-eye view of racial injustice in the American novel uses the image of <br>
+                                    the mockingbird to symbolize innocence harmed by cruelty and argues for courage, conscience, and human understanding.
+                            </div>
+                            <div class="book-meta">
+                                <span><strong>Author:</strong> Harper Lee</span>
+                                <span>Borrowed date: 09/19/2024</span>
+                            </div>
+                        </div>
+
+                        <div class="book-status checked"></div>
+                    </div>
+
+                    <!-- Book Card 2 -->
+                    <div class="book-card">
+                        <img src="../image/Siege.png" alt="Book Cover" class="book-cover" />
+                        <div class="book-info">
+                            <div class="book-title">The Siege</div>
+                            <div class="book-desc">
+                                    A novel set during the Siege of Leningrad, following a young girl who discovers her mother's secret past <br>
+                                    as a pianist and must survive the horrors of war.
+                            </div>
+                            <div class="book-meta">
+                                <span><strong>Author:</strong> Helen Dunmore</span>
+                                <span>Borrowed date: 09/19/2024</span>
+                            </div>
+                        </div>
+
+                        <div class="book-status unchecked"></div>
+                    </div>
+
+                    <!-- Book Card 3 --> 
+                     
+                </div>
+            </div>
+    </div>
+
+    <script>
+        
+        const menuIcon = document.querySelector('.menu-icon');
+        const sidebar = document.querySelector('.sidebar');
+        const overlay = document.querySelector('.overlay');
+
+        menuIcon.addEventListener('click', () => {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+        });
+
+        overlay.addEventListener('click', () => {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        });
+    
+    </script>
     
 </body>
 </html>

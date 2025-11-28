@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/*HEADER*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(235, 9, 9, 0.1);
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+.search-bar {
+  display: flex;
+  gap: 1px;
+}
+
+.search-bar input,
+.search-bar select {
+  padding: 8px 20px;
+  border: 1px solid #770e0e;
+  border-radius: 5px;
+}
+
+.menu-icon {
+  color: #770e0e;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.menu-icon:hover {
+  color: #5a0b0b;
+}
+
+/*OVER RELAY*/
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  right: 0;
+}
+
+.sidebar-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.sidebar-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.sidebar-menu li {
+  padding: 15px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+
+.sidebar-menu li a {
+  text-decoration: none;
+  color: black; 
+  font-weight: 500;
+  display: block;
+  padding: 8px 25px; 
+  border-radius: 6px;
+}
+
+.sidebar-menu li a:hover {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    background-color: #a06a55; 
+    padding: 10px 25px;
+    transition: 0.3s;
+}
+
+.sign-out {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a2d23;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.sign-out:hover {
+  background-color: #a06a55;
+}
+
+
+
+/*container*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(135deg, #f9ebea, #f3e5d8);
+  padding: 30px 40px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 200%;
+  background: linear-gradient(135deg, #fff, #f9ebea);
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.edit-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #8d6e63;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background 0.2s;
+}
+.edit-btn:hover {
+  background: #6d4c41;
+}
+
+
+/* Main Content Layout */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Who I Am Section */
+.who-am-i {
+  background-color: #f3e5d8;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.who-am-i h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.who-am-i .edit-icon {
+  background: #8d6e63;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.who-am-i .edit-icon:hover {
+  background: #6d4c41;
+}
+
+.who-am-i p {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.info-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.info-item svg {
+  margin-right: 10px;
+  fill: #6d4c41;
+  width: 18px;
+  height: 18px;
+}
+
+
+/* History Section */
+.history-section {
+  background-color: #f3e5d8;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex:  0 0 30%;
+}
+
+.history-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.book-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  position: relative;
+  width: 100%;
+}
+
+.book-cover {
+  width: 80px;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.book-info {
+  flex: 1;
+}
+
+.book-title {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.book-desc {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.book-meta {
+  font-size: 12px;
+  color: #777;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.book-status {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  background: #8d6e63;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.book-status.checked::after {
+  content: "✓";
+}
+
+.book-status.unchecked::after {
+  content: "○";
+  color: #ddd;
+  background: transparent;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.main-content {
+  grid-template-columns: 1fr;
+}
+
+.header {
+  flex-direction: column;
+  padding: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+}
+
+.book-card {
+  flex-direction: column;
+}
+
+.book-cover {
+  width: 100%;
+  height: 150px;
+  }
+}
