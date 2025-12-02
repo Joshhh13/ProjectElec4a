@@ -38,14 +38,14 @@
     
     <div class="login-form">
       <h2>CREATE YOUR ACCOUNT</h2>
-      <form>
+      <form id="signupform">
         <input type="text" id="fullName" placeholder="Enter your full name" required>
-        <input type="date" placeholder="Date of birth" required>
-        <input type="text" placeholder="Address" required>
-        <input type="email" placeholder="Enter your email" required>
+        <input type="date" id="dob" required>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="email" id="email" placeholder="Enter your email" required>
       
         <div class="password-container">
-          <input type="password" placeholder="Create your password" id="password" required>
+          <input type="password" id="password" placeholder="Create your password" required>
           <span class="toggle-password" onclick="togglePassword()"></span>
         </div>
       

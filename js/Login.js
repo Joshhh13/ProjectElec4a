@@ -1,40 +1,34 @@
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const loginBtn = document.getElementById('loginBtn');
 
-    const loginBtn = document.getElementById('loginBtn');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
+function checkLoginButton() {
+  loginBtn.disabled = !(emailInput.value.trim() && passwordInput.value.trim());
+}
 
-    function checkLoginButton() {
-      const email = emailInput.value.trim();
-      const password = passwordInput.value.trim();
-      loginBtn.disabled = !(email && password);
-    }
+emailInput.addEventListener('input', checkLoginButton);
+passwordInput.addEventListener('input', checkLoginButton);
 
-    emailInput.addEventListener('input', checkLoginButton);
-    passwordInput.addEventListener('input', checkLoginButton);
+loginBtn.addEventListener("click", function() {
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
 
-    loginBtn.addEventListener('click', function() {
-      const email = emailInput.value.trim();
-      const password = passwordInput.value.trim();
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-      if (!email || !password) {
-        alert("Please fill in both email and password.");
-        return;
-      }
+    const foundUser = users.find(
+        user => user.email === email && user.password === password
+    );
 
-      const users = JSON.parse(localStorage.getItem('users')) || [];
+    if (foundUser) {
+        localStorage.setItem("loggedInUser", foundUser.email);
 
-      const foundUser = users.find(user => user.email === email && user.password === password);
-
-      if (foundUser) {
         alert(`Welcome back, ${foundUser.fullName}!`);
-        
-        localStorage.setItem('loggedInUser', email);
-
         window.location.href = "homepage2.html";
-      } else {
-        alert("Invalid email or password. Please sign up first or check your details.");
-      }
-    });
+    } else {
+        alert("Invalid email or password.");
+    }
+});
+
 
 
 

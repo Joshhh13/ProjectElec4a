@@ -12,7 +12,7 @@ header {
   align-items: center;
   padding: 20px 50px;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(119, 14, 14, 0.1);
+  box-shadow: 0px 7px 6px rgba(0,0,0,0.1);
 }
 
 .logo img {
@@ -30,6 +30,7 @@ header {
   padding: 8px 15px;
   border: 1px solid #770e0e;
   border-radius: 5px;
+  box-shadow: 2px 2px 7px grey;
 }
 
 .menu-icon {

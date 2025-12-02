@@ -1,50 +1,41 @@
+document.getElementById("signupform").addEventListener("submit", function(e) {
+    e.preventDefault();
 
-    const form = document.querySelector('.login-form form');
-    const fullNameInput = document.getElementById('fullName');
-    const dobInput = document.getElementById('dob');
-    const addressInput = document.getElementById('address');
-    const emailInput = document.getElementById('email');
-    const passwordInput = document.getElementById('password');
+    const fullName = document.getElementById("fullName").value.trim();
+    const dob = document.getElementById("dob").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value.trim();
 
-    
-    form.addEventListener('submit', function(e) {
-      e.preventDefault(); 
-
-      
-      const fullName = fullNameInput.value.trim();
-      const dob = dobInput.value;
-      const address = addressInput.value.trim();
-      const email = emailInput.value.trim();
-      const password = passwordInput.value.trim();
-
-      
-      if (!fullName || !dob || !address || !email || !password) {
-        alert("Please fill in all fields.");
+    if (!fullName || !dob || !address || !email || !password) {
+        alert("Please fill in all required fields.");
         return;
-      }
+    }
 
-      
-      let users = JSON.parse(localStorage.getItem('users')) || [];
+    const users = JSON.parse(localStorage.getItem("users")) || [];
 
-      
-      if (users.some(user => user.email === email)) {
-        alert("Email already registered. Please log in instead.");
+    const exists = users.some(user => user.email === email);
+    if (exists) {
+        alert("Email already registered.");
         return;
-      }
+    }
 
-      
-      const newUser = {
-        fullName,
-        dob,
-        address,
-        email,
-        password
-      };
+    const newUser = {
+        fullName: fullName,
+        dob: dob,
+        address: address,
+        email: email,
+        password: password
+    };
 
-      
-      users.push(newUser);
-      localStorage.setItem('users', JSON.stringify(users));
+    users.push(newUser);
 
-      alert("Account created successfully! You can now log in.");
-      window.location.href = "Login.html"; // Redirect to login
-    });
+    localStorage.setItem("users", JSON.stringify(users));
+
+    alert("Account created successfully!");
+
+    window.location.href = "LogIn.html";
+});
+
+
+
