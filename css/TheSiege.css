@@ -28,7 +28,6 @@ header {
 .search-bar input,
 .search-bar select {
   padding: 8px 15px;
-  border: 1px solid #770e0e;
   border-radius: 5px;
   box-shadow: 2px 2px 7px grey;
 }
@@ -224,10 +223,11 @@ header {
   display: block;
   margin-top: 5vh;
   padding: 12px 40px;
-  background-color: #6c757d;
+  background: linear-gradient(to right, #555555, #fff);
   color: white;
   border: none;
   border-radius: 6px;
+  font-family: Arial, sans-serif;
   font-weight: bold;
   text-align: center;
   cursor: pointer;

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BorrowedDetails</title>
+    <link rel="stylesheet" href="../css/BorrowedDetails.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+        <a href="homepage2.html">
+          <img src="../image/logo.png" alt="Library Hub Logo" />
+        </a>
+        </div>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." />
+            <select>
+                <option>All Categories</option>
+            </select>
+        </div>
+
+        <div class="menu-icon">&#9776;</div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <img src="../image/sison.jpg" alt="Profile Picture" />
+            <h3>Christian Mark Sison</h3>
+        </div>
+
+        <ul class="sidebar-menu">
+            <li><a href="AccountManagement.html">Account Management</a></li>
+            <li><a href="Borrowed.html">Borrowed Books</a></li>
+            <li><a href="ReturnedBooks.html">Returned Books</a></li>
+        </ul>
+
+        <button class="sign-out">SIGN OUT</button>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Content -->
+    <div class="container">
+        <!-- Left Side -->
+        <div class="book-info-left">
+            <img src="../image/undersiege.png" alt="Under Siege">
+            <h1>Under Siege</h1>
+            <p>
+                The Levin family battle against starvation in this novel set during the German siege of Leningrad. Anna digs tank traps and dodges patrols as she scavenges for wood, but the hand of history is hard to escape.
+            </p>
+        </div>
+
+        <!-- Right Side -->
+        <div class="book-info-right">
+            <h2 class="status">Available</h2>
+            <div class="info-panel">
+                <p><strong>Title:</strong> Under Siege</p>
+                <p><strong>Author:</strong> Ismail Kadare</p>
+                <p><strong>First published:</strong> Nov 17, 1990 (United Kingdom)</p>
+                <p><strong>Original publisher:</strong> HarperCollins</p>
+                <p><strong>Format & length:</strong> Hardcover, 352 pages</p>
+                <p><strong>Genre:</strong> Military Fiction / Thriller / Action</p>
+                <p><strong>Narrator / Point of view:</strong> Third-person omniscient (walang tiyak na "narrator" dahil ito ay prosa, hindi audiobook)</p>
+                <p><strong>Setting:</strong> U.S. Navy aircraft carrier; global military hotspots (Mediterranean, Middle East)</p>
+            </div>
+            <button class="return-btn" onclick="returnBook()">RETURN</button>
+        </div>
+    </div>
+
+        <!-- RETURN MODAL -->
+    <div id="returnModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div class="modal-body">
+                <!-- LEFT COLUMN -->
+                <div class="modal-left">
+                    <h3>Borrower Information</h3>
+                    <input type="text" placeholder="Student ID">
+                    <input type="text" placeholder="Full Name">
+                    <input type="text" placeholder="Course / Department / Year Level">
+                    <input type="text" placeholder="Transaction ID">
+
+                    <h3>Borrowing Details</h3>
+                    <input type="text" placeholder="Date Borrowed">
+                    <input type="text" placeholder="Due Date / Return Date">
+                    <input type="text" placeholder="Status">
+                    <input type="text" placeholder="Remarks / Notes">
+                </div>
+
+                <!-- RIGHT COLUMN -->
+                <div class="modal-right">
+                    <h3>Book Information</h3>
+                    <input type="text" placeholder="Book ID">
+                    <input type="text" placeholder="Book Title">
+                    <input type="text" placeholder="Author">
+                    <input type="text" placeholder="Category / Subject">
+
+                    <button class="confirm-btn">CONFIRM</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/borrowed.js"></script>
+</body>
+</html>

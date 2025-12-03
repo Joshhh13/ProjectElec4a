@@ -28,7 +28,6 @@ header {
 .search-bar input,
 .search-bar select {
   padding: 8px 20px;
-  border: 1px solid #770e0e;
   border-radius: 5px;
   box-shadow: 2px 2px 7px grey;
 }
